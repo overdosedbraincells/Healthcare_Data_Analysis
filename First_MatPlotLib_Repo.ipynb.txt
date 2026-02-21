@@ -1,0 +1,52 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "yLy8Xfb046nU"
+      },
+      "outputs": [],
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "gunler = [\"Pzt\", \"Sal\", \"Çar\", \"Per\", \"Cum\", \"Cmt\", \"Paz\"]\n",
+        "\n",
+        "aspirin = [500, 480, 420, 350, 210, 150, 80]\n",
+        "parol = [800, 750, 700, 650, 600, 550, 500]\n",
+        "antibiyotik = [300, 290, 100, 80, 50, 20, 10]\n",
+        "\n",
+        "plt.figure(figsize=(12, 6))\n",
+        "\n",
+        "plt.plot(gunler, aspirin, marker='o', label=\"Aspirin\", color=\"royalblue\", linewidth=2)\n",
+        "plt.plot(gunler, parol, marker='s', label=\"Parol\", color=\"seagreen\", linewidth=2)\n",
+        "plt.plot(gunler, antibiyotik, marker='^', label=\"Antibiyotik\", color=\"crimson\", linewidth=2)\n",
+        "\n",
+        "plt.axhline(y=100, color='gray', linestyle='--', alpha=0.5, label=\"Kritik Eşik\")\n",
+        "\n",
+        "plt.title(\"Haftalık İlaç Stok Karşılaştırma Analizi\", fontsize=15)\n",
+        "plt.xlabel(\"Günler\")\n",
+        "plt.ylabel(\"Stok Miktarı (mg)\")\n",
+        "plt.grid(True, which='both', linestyle=':', alpha=0.5)\n",
+        "\n",
+        "plt.legend()\n",
+        "\n",
+        "plt.show()"
+      ]
+    }
+  ]
+}
